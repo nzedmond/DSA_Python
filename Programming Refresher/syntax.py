@@ -15,10 +15,27 @@ def guessNumber(player_guess, range_begin, range_end):
 
     print(f"You guessed it. The secret number is {secrete_number}")
 
+def collatzSeq(number):
+    if number % 2 == 0:
+        result = number // 2
+        print(result)
+
+    else:
+        result = 3 * number + 1
+        print(result)
+
+    return result
+
 def main():
     range_begin = 1
     range_end = 24
-    player_guess = int(input(f"Guess a number between {range_begin} and {range_end}: "))
-    guessNumber(player_guess, range_begin, range_end)
+    # player_guess = int(input(f"Guess a number between {range_begin} and {range_end}: "))
+    # guessNumber(player_guess, range_begin, range_end)
+
+    in_number = int(input("Enter a number: "))
+    collatz_result = collatzSeq(in_number)
+    while collatz_result != 1:
+        collatz_result = collatzSeq(collatz_result)
+    # print(collatz_result)
 
 main()
