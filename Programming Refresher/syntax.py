@@ -26,16 +26,32 @@ def collatzSeq(number):
 
     return result
 
+def myFriends():
+    friends = []
+    name = input("Enter your friend's name: ")
+    while True:
+        print('Enter the name of friend' + str(len(friends) + 1) + '(or nothing to stop.): ')
+        name = input()
+        if name == '':
+            break
+        friends = friends + [name]
+
+    print("My friends' names are: ")
+    for n in friends:
+        print(' '+ n)
+
 def main():
     range_begin = 1
     range_end = 24
     # player_guess = int(input(f"Guess a number between {range_begin} and {range_end}: "))
     # guessNumber(player_guess, range_begin, range_end)
 
-    in_number = int(input("Enter a number: "))
-    collatz_result = collatzSeq(in_number)
-    while collatz_result != 1:
-        collatz_result = collatzSeq(collatz_result)
+    # in_number = int(input("Enter a number: "))
+    # collatz_result = collatzSeq(in_number)
+    # while collatz_result != 1:
+    #     collatz_result = collatzSeq(collatz_result)
     # print(collatz_result)
+
+    myFriends()
 
 main()
