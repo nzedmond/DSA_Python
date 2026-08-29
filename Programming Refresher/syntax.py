@@ -40,6 +40,16 @@ def myFriends():
     for n in friends:
         print(' '+ n)
 
+def putCamma(things):
+    listItems = ''
+    for item in things:
+        if things[len(things)-1] == item:
+            listItems += 'and '+item
+        else:
+            listItems += item+', '
+
+    return listItems
+
 def main():
     range_begin = 1
     range_end = 24
@@ -51,7 +61,9 @@ def main():
     # while collatz_result != 1:
     #     collatz_result = collatzSeq(collatz_result)
     # print(collatz_result)
+    things = ['apples', 'bananas', 'tofu', 'cats']
+    print(putCamma(things))
 
-    myFriends()
+    # myFriends()
 
 main()
