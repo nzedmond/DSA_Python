@@ -50,6 +50,11 @@ def putCamma(things):
 
     return listItems
 
+def printGrid(grid):
+    for r in range(len(grid)):
+        for c in range(len(grid[c])):
+            print(grid[r][c])
+
 def main():
     range_begin = 1
     range_end = 24
