@@ -49,3 +49,30 @@ collection3 = [1, 1]
 print(is_authentic_collection(collection1))
 print(is_authentic_collection(collection2))
 print(is_authentic_collection(collection3))
+
+# Problem 3
+def organize_exhibition(collection):
+    # We need to display arts on the wall (2D array)
+    # Keep track of the arts that meet the criteria
+    display_wall = []
+    print_counts = {}
+
+    for art in collection:
+        curr_count = print_counts.get(art, 0)
+        print_counts[art] = curr_count + 1
+
+        if curr_count >= len(display_wall):
+            display_wall.append([])
+
+        display_wall[curr_count].append(art)
+
+    return display_wall
+
+    
+
+collection1 = ["O'Keefe", "Kahlo", "Picasso", "O'Keefe", "Warhol", 
+              "Kahlo", "O'Keefe"]
+collection2 = ["Kusama", "Monet", "Ofili", "Banksy"]
+
+print(organize_exhibition(collection1))
+print(organize_exhibition(collection2)) 
