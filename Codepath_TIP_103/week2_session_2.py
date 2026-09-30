@@ -76,3 +76,22 @@ collection2 = ["Kusama", "Monet", "Ofili", "Banksy"]
 
 print(organize_exhibition(collection1))
 print(organize_exhibition(collection2)) 
+
+# Problem 4
+
+def subdomain_visits(cpdomains):
+    # break domains into subdomains
+    for cpdomain in cpdomains:
+        count_str, domain = cpdomain.split(" ")
+        count = int(count_str)
+
+        domain_fragments = 
+
+
+
+cpdomains1 = ["9001 modern.artmuseum.com"]
+cpdomains2 = ["900 abstract.gallery.com", "50 impressionism.com", 
+              "1 contemporary.gallery.com", "5 medieval.org"]
+
+print(subdomain_visits(cpdomains1))
+print(subdomain_visits(cpdomains2))
